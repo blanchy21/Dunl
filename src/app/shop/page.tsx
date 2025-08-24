@@ -6,22 +6,38 @@ export default function ShopPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <div className="bg-gray-50 min-h-screen">
-        {/* Header */}
-        <div className="bg-white shadow-sm">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
+      
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        {/* Background Image - using hero-shop.jpg */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/hero-shop.png')"
+          }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center text-white px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Store Directory
             </h1>
-            <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Discover all the amazing stores at Dun Laoghaire Shopping Centre. 
               From fashion and beauty to home goods and electronics, we have everything you need.
             </p>
           </div>
         </div>
+      </div>
 
+      <div className="bg-gray-50 min-h-screen">
         {/* Store Grid */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
           <StoreGrid />
         </div>
       </div>

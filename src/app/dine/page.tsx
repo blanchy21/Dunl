@@ -1,19 +1,46 @@
 import Navigation from '../../components/Navigation';
+import DineGrid from '../../components/DineGrid';
+import Footer from '../../components/Footer';
 
 export default function DinePage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
-            Dine
-          </h1>
-          <p className="text-xl text-gray-600 text-center">
-            Coming soon - Dining options at Dun Laoghaire Shopping Centre
-          </p>
+      
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        {/* Background Image - using dine-hero.png */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/dine-hero.png')"
+          }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center text-white px-4">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Dining & Restaurants
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Discover amazing dining options at Dun Laoghaire Shopping Centre. 
+              From casual cafes to fine dining, we have something for every taste and occasion.
+            </p>
+          </div>
         </div>
       </div>
+
+      <div className="bg-gray-50 min-h-screen">
+        {/* Restaurant Grid */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <DineGrid />
+        </div>
+      </div>
+      <Footer />
     </main>
   );
 }

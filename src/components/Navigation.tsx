@@ -1,13 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
 
 const Navigation = () => {
-  const [isShopOpen, setIsShopOpen] = useState(false);
-
   const menuItems = [
-    { name: 'Shop', href: '/shop', hasSubmenu: true },
+    { name: 'Shop', href: '/shop' },
     { name: 'Dine', href: '/dine' },
     { name: "What's On", href: '/whats-on' },
     { name: 'History', href: '/history' },
@@ -21,8 +18,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-blue-800">
-              Dun Laoghaire
+            <Link href="/" className="flex items-center">
+              <img 
+                src="/dun-logo.png" 
+                alt="Dun Laoghaire Logo" 
+                className="h-10 w-auto"
+              />
             </Link>
           </div>
 
@@ -30,38 +31,13 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {menuItems.map((item) => (
-                <div key={item.name} className="relative">
-                  {item.hasSubmenu ? (
-                    <div
-                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium cursor-pointer"
-                      onMouseEnter={() => setIsShopOpen(true)}
-                      onMouseLeave={() => setIsShopOpen(false)}
-                    >
-                      {item.name}
-                      {isShopOpen && item.name === 'Shop' && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-md shadow-lg py-2 z-50">
-                          <div className="px-4 py-2">
-                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Store Directory</h3>
-                            <p className="text-sm text-gray-600 mb-3">Browse all our stores and find what you're looking for</p>
-                            <Link 
-                              href="/shop" 
-                              className="inline-block bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-                            >
-                              View All Stores
-                            </Link>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                >
+                  {item.name}
+                </Link>
               ))}
             </div>
           </div>

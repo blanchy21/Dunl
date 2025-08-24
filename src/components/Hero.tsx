@@ -3,11 +3,11 @@
 const Hero = () => {
   return (
     <div className="relative h-[600px] overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image - using mall-2.png */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2126&q=80')"
+          backgroundImage: "url('/mall-2.png')"
         }}
       >
         {/* Dark overlay for better text readability */}

@@ -114,8 +114,8 @@ const StoreGrid = () => {
             onClick={() => setSelectedStore(store)}
           >
             {/* Store Logo */}
-            <div className="h-32 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-              <span className="text-6xl">{store.logo}</span>
+            <div className="h-48 bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+              <span className="text-7xl">{store.logo}</span>
             </div>
             
             {/* Store Info */}
