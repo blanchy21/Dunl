@@ -1,15 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
+import OpeningTimes from './OpeningTimes';
 
 const Navigation = () => {
   const menuItems = [
     { name: 'Shop', href: '/shop' },
     { name: 'Dine', href: '/dine' },
-    { name: "What's On", href: '/whats-on' },
     { name: 'History', href: '/history' },
     { name: 'Information', href: '/information' },
     { name: 'Visit', href: '/visit' },
+    { name: 'Parking', href: '/parking' },
   ];
 
   return (
@@ -19,9 +21,11 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <img 
+              <Image 
                 src="/dun-logo.png" 
                 alt="Dun Laoghaire Logo" 
+                width={40}
+                height={40}
                 className="h-10 w-auto"
               />
             </Link>
@@ -39,11 +43,16 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+              {/* Opening Times */}
+              <div className="ml-8">
+                <OpeningTimes />
+              </div>
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and Opening Times */}
+          <div className="md:hidden flex items-center space-x-4">
+            <OpeningTimes />
             <button className="text-gray-700 hover:text-blue-600 p-2">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />

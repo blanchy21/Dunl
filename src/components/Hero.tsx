@@ -17,23 +17,15 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="text-center text-white px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display">
             Dun Laoghaire
           </h1>
-          <h2 className="text-2xl md:text-3xl font-light mb-8">
+          <h2 className="text-2xl md:text-3xl font-light mb-8 font-display">
             Shopping Centre
           </h2>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Discover the perfect blend of shopping, dining, and entertainment in the heart of Dublin's coastal town
+            Discover the perfect blend of shopping, dining, and entertainment in the heart of Dublin&apos;s coastal town
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-800 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Explore Stores
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-800 transition-colors">
-              Plan Your Visit
-            </button>
-          </div>
         </div>
       </div>
     </div>

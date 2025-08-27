@@ -23,12 +23,11 @@ export default function DinePage() {
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center text-white px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Dining & Restaurants
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display">
+              Dining & Cafes
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Discover amazing dining options at Dun Laoghaire Shopping Centre. 
-              From casual cafes to fine dining, we have something for every taste and occasion.
+              Experience amazing dining options at Dun Laoghaire Shopping Centre
             </p>
           </div>
         </div>

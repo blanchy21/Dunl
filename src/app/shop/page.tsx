@@ -23,12 +23,11 @@ export default function ShopPage() {
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center h-full">
           <div className="text-center text-white px-4">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Store Directory
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display">
+              Shop Directory
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Discover all the amazing stores at Dun Laoghaire Shopping Centre. 
-              From fashion and beauty to home goods and electronics, we have everything you need.
+              Discover amazing stores and boutiques at Dun Laoghaire Shopping Centre
             </p>
           </div>
         </div>

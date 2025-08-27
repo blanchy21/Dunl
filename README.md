@@ -1,15 +1,28 @@
-# Ansh & Riley Full-Stack Template
+# Dun Laoghaire Shopping Centre Website
 
-This is a full-stack template project for Software Composers to create  applications with AI.
+A modern, responsive website for Dun Laoghaire Shopping Centre built with Next.js 14.
 
 ## Getting started
-To create a new project, you go to `/paths`, choose from our list of Paths, and then use Cursor's Composer feature to quickly scaffold your project!
 
-You can also edit the Path's prompt template to be whatever you like!
+To get started with this project, clone the repository and install dependencies:
+
+```bash
+npm install
+npm run dev
+```
 
 ## Technologies used
-This doesn't really matter, but is useful for the AI to understand more about this project. We are using the following technologies
+
 - React with Next.js 14 App Router
-- TailwindCSS
-- Firebase Auth, Storage, and Database
-- Multiple AI endpoints including OpenAI, Anthropic, and Replicate using Vercel's AI SDK
+- TypeScript for type safety
+- Tailwind CSS for styling
+- Firebase for backend services
+- Vercel AI SDK for AI integrations
+
+## Features
+
+- Responsive design for all devices
+- Modern UI with elegant typography
+- Image optimization with Next.js Image
+- SEO optimized
+- Performance focused
