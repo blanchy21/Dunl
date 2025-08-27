@@ -455,6 +455,46 @@ const StoreGrid = () => {
     },
     {
       id: 22,
+      name: "Images",
+      logo: "/images-logo.png",
+      logoType: 'image',
+      unit: "Unit 114/7-9",
+      floor: "Ground Floor",
+      category: "Photography & Imaging",
+      description: "Professional photography and imaging services offering photo printing, digital imaging, photo restoration, and custom photo products. Expert advice on photography and image quality.",
+      phone: "(01) 280 6542",
+      openingHours: {
+        monday: "10am - 5:30pm",
+        tuesday: "10am - 5:30pm",
+        wednesday: "10am - 5:30pm",
+        thursday: "10am - 5:30pm",
+        friday: "10am - 5:30pm",
+        saturday: "10am - 5:30pm",
+        sunday: "Closed"
+      }
+    },
+    {
+      id: 23,
+      name: "Dubray Bookshop",
+      logo: "/dubray-logo.png",
+      logoType: 'image',
+      unit: "Unit 219",
+      floor: "First Floor",
+      category: "Books & Stationery",
+      description: "Leading Irish bookshop offering a wide selection of books, stationery, gifts, and educational materials. Expert staff recommendations and regular author events.",
+      phone: "(01) 280 9917",
+      openingHours: {
+        monday: "9am - 6pm",
+        tuesday: "9am - 6pm",
+        wednesday: "9am - 6pm",
+        thursday: "9am - 6pm",
+        friday: "9am - 6pm",
+        saturday: "9am - 6pm",
+        sunday: "12pm - 6pm"
+      }
+    },
+    {
+      id: 24,
       name: "Fashion Forward",
       logo: "👗",
       logoType: 'emoji',
@@ -475,7 +515,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 23,
+      id: 25,
       name: "Beauty Bliss",
       logo: "💄",
       logoType: 'emoji',
@@ -496,7 +536,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 24,
+      id: 26,
       name: "Home & Garden",
       logo: "🏠",
       logoType: 'emoji',
@@ -517,7 +557,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 25,
+      id: 27,
       name: "Sports Zone",
       logo: "⚽",
       logoType: 'emoji',
@@ -538,7 +578,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 26,
+      id: 28,
       name: "Book Corner",
       logo: "📚",
       logoType: 'emoji',
@@ -559,7 +599,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 27,
+      id: 29,
       name: "Jewelry Box",
       logo: "💍",
       logoType: 'emoji',
@@ -580,7 +620,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 28,
+      id: 30,
       name: "Kids World",
       logo: "🧸",
       logoType: 'emoji',
@@ -601,7 +641,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 29,
+      id: 31,
       name: "Coffee Corner",
       logo: "☕",
       logoType: 'emoji',
@@ -622,7 +662,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 30,
+      id: 32,
       name: "Health & Wellness",
       logo: "💊",
       logoType: 'emoji',
@@ -643,7 +683,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 31,
+      id: 33,
       name: "Gift Gallery",
       logo: "🎁",
       logoType: 'emoji',
@@ -664,7 +704,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 32,
+      id: 34,
       name: "Shoe Store",
       logo: "👠",
       logoType: 'emoji',
@@ -685,7 +725,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 33,
+      id: 35,
       name: "Optical Express",
       logo: "👓",
       logoType: 'emoji',
@@ -706,7 +746,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 34,
+      id: 36,
       name: "Music Store",
       logo: "🎵",
       logoType: 'emoji',
@@ -716,27 +756,6 @@ const StoreGrid = () => {
       description: "Musical instruments, sheet music, and audio equipment.",
       phone: "01 2846004",
       email: "music@musicstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 35,
-      name: "Art Supplies",
-      logo: "🎨",
-      logoType: 'emoji',
-      unit: "Unit 16",
-      floor: "First Floor",
-      category: "Art",
-      description: "Quality art supplies for artists of all skill levels.",
-      phone: "01 2846005",
-      email: "create@artsupplies.ie",
       openingHours: {
         monday: "9am - 6pm",
         tuesday: "9am - 6pm",
