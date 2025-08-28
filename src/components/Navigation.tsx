@@ -6,12 +6,10 @@ import OpeningTimes from './OpeningTimes';
 
 const Navigation = () => {
   const menuItems = [
+    { name: 'Home', href: '/' },
     { name: 'Shop', href: '/shop' },
     { name: 'Dine', href: '/dine' },
-    { name: 'History', href: '/history' },
     { name: 'Information', href: '/information' },
-    { name: 'Visit', href: '/visit' },
-    { name: 'Parking', href: '/parking' },
   ];
 
   return (

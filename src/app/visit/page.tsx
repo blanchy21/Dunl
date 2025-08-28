@@ -4,11 +4,35 @@ export default function VisitPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
+      
+      {/* Hero Section */}
+      <div className="relative h-[400px] overflow-hidden">
+        {/* Background Image - using visit-bandstand.jpg */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/visit-bandstand.jpg')"
+          }}
+        >
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center text-white px-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display">
+              Visit Us
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Plan your visit to Dun Laoghaire Shopping Centre on the beautiful Dublin coast
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-gray-50 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-4xl font-bold text-gray-900 text-center mb-8 font-display">
-            Visit Us
-          </h1>
           
           {/* Address Section */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -158,7 +182,8 @@ export default function VisitPage() {
               <div>
                 <h3 className="text-lg font-medium text-gray-800 mb-3">Shopping Centre</h3>
                 <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Monday - Friday:</span> 9:00 AM - 6:00 PM</p>
+                  <p><span className="font-medium">Monday - Wednesday:</span> 9:00 AM - 6:00 PM</p>
+                  <p><span className="font-medium">Thursday - Friday:</span> 9:00 AM - 9:00 PM</p>
                   <p><span className="font-medium">Saturday:</span> 9:00 AM - 6:00 PM</p>
                   <p><span className="font-medium">Sunday:</span> 12:00 PM - 6:00 PM</p>
                 </div>

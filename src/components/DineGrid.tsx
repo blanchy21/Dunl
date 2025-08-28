@@ -30,286 +30,11 @@ interface Restaurant {
 const DineGrid = () => {
   const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
 
-  // 12 restaurants with varied data
+  // 3 restaurants with real data
   const restaurants: Restaurant[] = [
+
     {
       id: 1,
-      name: "Coastal Bistro",
-      logo: "🍽️",
-      logoType: 'emoji',
-      unit: "Unit 5",
-      floor: "Ground Floor",
-      cuisine: "Irish/European",
-      description: "Fresh seafood and local Irish cuisine with stunning coastal views. Perfect for lunch or dinner with locally sourced ingredients and seasonal menus.",
-      phone: "01 2845991",
-      email: "info@coastalbistro.ie",
-      website: "https://coastalbistro.ie",
-      priceRange: "€€€",
-      openingHours: {
-        monday: "12:00 - 22:00",
-        tuesday: "12:00 - 22:00",
-        wednesday: "12:00 - 22:00",
-        thursday: "12:00 - 22:00",
-        friday: "12:00 - 23:00",
-        saturday: "12:00 - 23:00",
-        sunday: "12:00 - 21:00"
-      }
-    },
-    {
-      id: 2,
-      name: "Brew & Bean",
-      logo: "☕",
-      logoType: 'emoji',
-      unit: "Unit 12",
-      floor: "Ground Floor",
-      cuisine: "Coffee & Pastries",
-      description: "Artisan coffee shop serving specialty coffees, fresh pastries, and light snacks. Perfect for a morning pick-me-up or afternoon break.",
-      phone: "01 2845992",
-      email: "hello@brewandbean.ie",
-      website: "https://brewandbean.ie",
-      priceRange: "€",
-      openingHours: {
-        monday: "7:00 - 18:00",
-        tuesday: "7:00 - 18:00",
-        wednesday: "7:00 - 18:00",
-        thursday: "7:00 - 18:00",
-        friday: "7:00 - 19:00",
-        saturday: "8:00 - 18:00",
-        sunday: "8:00 - 17:00"
-      }
-    },
-    {
-      id: 3,
-      name: "Pizza Palace",
-      logo: "🍕",
-      logoType: 'emoji',
-      unit: "Unit 18",
-      floor: "First Floor",
-      cuisine: "Italian",
-      description: "Authentic Italian pizzas made with fresh ingredients and traditional recipes. Wood-fired ovens and family-friendly atmosphere.",
-      phone: "01 2845993",
-      email: "orders@pizzapalace.ie",
-      website: "https://pizzapalace.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "11:00 - 23:00",
-        tuesday: "11:00 - 23:00",
-        wednesday: "11:00 - 23:00",
-        thursday: "11:00 - 23:00",
-        friday: "11:00 - 00:00",
-        saturday: "11:00 - 00:00",
-        sunday: "12:00 - 22:00"
-      }
-    },
-    {
-      id: 4,
-      name: "Sushi Express",
-      logo: "🍣",
-      logoType: 'emoji',
-      unit: "Unit 22",
-      floor: "First Floor",
-      cuisine: "Japanese",
-      description: "Fresh sushi, sashimi, and Japanese street food. Quick service for busy shoppers with authentic flavors and quality ingredients.",
-      phone: "01 2845994",
-      email: "info@sushiexpress.ie",
-      website: "https://sushiexpress.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "11:00 - 21:00",
-        tuesday: "11:00 - 21:00",
-        wednesday: "11:00 - 21:00",
-        thursday: "11:00 - 21:00",
-        friday: "11:00 - 22:00",
-        saturday: "11:00 - 22:00",
-        sunday: "12:00 - 20:00"
-      }
-    },
-    {
-      id: 5,
-      name: "Burger Joint",
-      logo: "🍔",
-      logoType: 'emoji',
-      unit: "Unit 9",
-      floor: "Ground Floor",
-      cuisine: "American",
-      description: "Gourmet burgers with premium ingredients and creative toppings. Family-friendly dining with craft beers and milkshakes.",
-      phone: "01 2845995",
-      email: "hello@burgerjoint.ie",
-      website: "https://burgerjoint.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "11:00 - 22:00",
-        tuesday: "11:00 - 22:00",
-        wednesday: "11:00 - 22:00",
-        thursday: "11:00 - 22:00",
-        friday: "11:00 - 23:00",
-        saturday: "11:00 - 23:00",
-        sunday: "12:00 - 21:00"
-      }
-    },
-    {
-      id: 6,
-      name: "Sweet Treats",
-      logo: "🍰",
-      logoType: 'emoji',
-      unit: "Unit 15",
-      floor: "First Floor",
-      cuisine: "Desserts & Ice Cream",
-      description: "Handcrafted desserts, artisanal ice cream, and specialty cakes. Perfect for a sweet break or special occasion celebration.",
-      phone: "01 2845996",
-      email: "sweet@treats.ie",
-      website: "https://sweettreats.ie",
-      priceRange: "€",
-      openingHours: {
-        monday: "10:00 - 20:00",
-        tuesday: "10:00 - 20:00",
-        wednesday: "10:00 - 20:00",
-        thursday: "10:00 - 20:00",
-        friday: "10:00 - 21:00",
-        saturday: "10:00 - 21:00",
-        sunday: "11:00 - 19:00"
-      }
-    },
-    {
-      id: 7,
-      name: "Healthy Bowl",
-      logo: "🥗",
-      logoType: 'emoji',
-      unit: "Unit 7",
-      floor: "Ground Floor",
-      cuisine: "Healthy & Vegan",
-      description: "Nutritious bowls, smoothies, and plant-based options for health-conscious diners. Fresh, organic ingredients and customizable meals.",
-      phone: "01 2845997",
-      email: "healthy@bowl.ie",
-      website: "https://healthybowl.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "8:00 - 19:00",
-        tuesday: "8:00 - 19:00",
-        wednesday: "8:00 - 19:00",
-        thursday: "8:00 - 19:00",
-        friday: "8:00 - 20:00",
-        saturday: "9:00 - 19:00",
-        sunday: "9:00 - 18:00"
-      }
-    },
-    {
-      id: 8,
-      name: "Tap House",
-      logo: "🍺",
-      logoType: 'emoji',
-      unit: "Unit 25",
-      floor: "First Floor",
-      cuisine: "Pub Food & Drinks",
-      description: "Traditional Irish pub serving hearty pub grub, local beers, and live music on weekends. Cozy atmosphere with outdoor seating.",
-      phone: "01 2845998",
-      email: "info@taphouse.ie",
-      website: "https://taphouse.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "12:00 - 00:00",
-        tuesday: "12:00 - 00:00",
-        wednesday: "12:00 - 00:00",
-        thursday: "12:00 - 00:00",
-        friday: "12:00 - 01:00",
-        saturday: "12:00 - 01:00",
-        sunday: "12:00 - 23:00"
-      }
-    },
-    {
-      id: 9,
-      name: "Noodle Bar",
-      logo: "🍜",
-      logoType: 'emoji',
-      unit: "Unit 28",
-      floor: "First Floor",
-      cuisine: "Asian Fusion",
-      description: "Fresh noodle dishes with authentic Asian flavors. Quick service with customizable options and vegetarian-friendly menu.",
-      phone: "01 2845999",
-      email: "hello@noodlebar.ie",
-      website: "https://noodlebar.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "11:00 - 21:00",
-        tuesday: "11:00 - 21:00",
-        wednesday: "11:00 - 21:00",
-        thursday: "11:00 - 21:00",
-        friday: "11:00 - 22:00",
-        saturday: "11:00 - 22:00",
-        sunday: "12:00 - 20:00"
-      }
-    },
-    {
-      id: 10,
-      name: "Fish & Chips",
-      logo: "🐟",
-      logoType: 'emoji',
-      unit: "Unit 11",
-      floor: "Ground Floor",
-      cuisine: "British/Irish",
-      description: "Classic fish and chips with crispy batter and fluffy chips. Traditional takeaway with seating available. Fresh daily catches.",
-      phone: "01 2846000",
-      email: "fish@chips.ie",
-      website: "https://fishandchips.ie",
-      priceRange: "€",
-      openingHours: {
-        monday: "11:00 - 21:00",
-        tuesday: "11:00 - 21:00",
-        wednesday: "11:00 - 21:00",
-        thursday: "11:00 - 21:00",
-        friday: "11:00 - 22:00",
-        saturday: "11:00 - 22:00",
-        sunday: "12:00 - 20:00"
-      }
-    },
-    {
-      id: 11,
-      name: "Gourmet Deli",
-      logo: "🥪",
-      logoType: 'emoji',
-      unit: "Unit 14",
-      floor: "Ground Floor",
-      cuisine: "Deli & Sandwiches",
-      description: "Premium deli sandwiches, fresh salads, and gourmet ingredients. Perfect for a quick lunch or takeaway meal.",
-      phone: "01 2846001",
-      email: "deli@gourmet.ie",
-      website: "https://gourmetdeli.ie",
-      priceRange: "€€",
-      openingHours: {
-        monday: "8:00 - 18:00",
-        tuesday: "8:00 - 18:00",
-        wednesday: "8:00 - 18:00",
-        thursday: "8:00 - 18:00",
-        friday: "8:00 - 19:00",
-        saturday: "9:00 - 18:00",
-        sunday: "10:00 - 16:00"
-      }
-    },
-    {
-      id: 12,
-      name: "The Seafood Shack",
-      logo: "🦐",
-      logoType: 'emoji',
-      unit: "Unit 12",
-      floor: "Ground Floor",
-      cuisine: "Seafood",
-      description: "Fresh seafood restaurant serving the catch of the day, grilled fish, and seafood platters.",
-      phone: "01 2845999",
-      email: "info@seafoodshack.ie",
-      website: "https://seafoodshack.ie",
-      priceRange: "€€€",
-      openingHours: {
-        monday: "12pm - 10pm",
-        tuesday: "12pm - 10pm",
-        wednesday: "12pm - 10pm",
-        thursday: "12pm - 10pm",
-        friday: "12pm - 11pm",
-        saturday: "12pm - 11pm",
-        sunday: "12pm - 9pm"
-      }
-    },
-    {
-      id: 13,
       name: "O'Brien's Sandwich Cafe",
       logo: "/obriens-logo.png",
       logoType: 'image',
@@ -326,6 +51,50 @@ const DineGrid = () => {
         thursday: "8:30am - 4:30pm",
         friday: "8:30am - 4:30pm",
         saturday: "9am - 4:30pm",
+        sunday: "Closed"
+      }
+    },
+    {
+      id: 2,
+      name: "Shoe Lane Coffee",
+      logo: "/shoe-lane-coffee.png",
+      logoType: 'image',
+      unit: "Unit 107",
+      floor: "Ground Floor",
+      cuisine: "Coffee & Cafe",
+      description: "Specialty coffee shop offering premium coffee, pastries, light meals, and artisanal beverages. Early opening for commuters with extended hours for coffee enthusiasts.",
+      phone: "(01) 5162182",
+      website: "www.shoelanecoffee.ie",
+      priceRange: "€€",
+      openingHours: {
+        monday: "6:30am - 6:30pm",
+        tuesday: "6:30am - 6:30pm",
+        wednesday: "6:30am - 6:30pm",
+        thursday: "6:30am - 6:30pm",
+        friday: "6:30am - 6:30pm",
+        saturday: "8am - 6:30pm",
+        sunday: "8am - 6:30pm"
+      }
+    },
+
+    {
+      id: 3,
+      name: "90°",
+      logo: "/90-logo.png",
+      logoType: 'image',
+      unit: "Unit 213E",
+      floor: "First Floor",
+      cuisine: "Coffee & Cafe",
+      description: "Specialty coffee shop offering premium coffee, light snacks, and a cozy atmosphere. Perfect for coffee enthusiasts and those looking for a relaxing break.",
+      phone: "085 225 5911",
+      priceRange: "€€",
+      openingHours: {
+        monday: "9am - 4pm",
+        tuesday: "9am - 4pm",
+        wednesday: "9am - 4pm",
+        thursday: "9am - 4pm",
+        friday: "9am - 4pm",
+        saturday: "9:30am - 3:30pm",
         sunday: "Closed"
       }
     }

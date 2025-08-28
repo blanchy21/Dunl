@@ -31,14 +31,15 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Legal & Policies */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Legal & Policies</h4>
             <ul className="space-y-2">
-              <li><a href="/shop" className="text-gray-300 hover:text-white transition-colors">Store Directory</a></li>
-              <li><a href="/dine" className="text-gray-300 hover:text-white transition-colors">Dining</a></li>
-              <li><a href="/whats-on" className="text-gray-300 hover:text-white transition-colors">What&apos;s On</a></li>
-              <li><a href="/visit" className="text-gray-300 hover:text-white transition-colors">Visit Us</a></li>
+              <li><a href="/cookies-policy" className="text-gray-300 hover:text-white transition-colors">Cookies Policy</a></li>
+              <li><a href="/privacy-policy" className="text-gray-300 hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/web-accessibility" className="text-gray-300 hover:text-white transition-colors">Web Accessibility</a></li>
+              <li><a href="/site-map" className="text-gray-300 hover:text-white transition-colors">Site Map</a></li>
+              <li><a href="/terms-and-conditions" className="text-gray-300 hover:text-white transition-colors">Terms and Conditions</a></li>
             </ul>
           </div>
 
@@ -46,10 +47,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p>Dun Laoghaire Shopping Centre</p>
-              <p>Dublin, Ireland</p>
-              <p>Phone: +353 1 234 5678</p>
-              <p>Email: info@dunlaoghaire.ie</p>
+              <p>5 Marine Rd</p>
+              <p>Dún Laoghaire, Dublin</p>
+              <p>A96 D283</p>
+              <p>Phone: (01) 280 2981</p>
+              <p>Email: info@dlsc.ie</p>
             </div>
           </div>
         </div>

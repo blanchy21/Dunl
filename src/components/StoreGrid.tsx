@@ -213,28 +213,9 @@ const StoreGrid = () => {
         sunday: "12pm - 6pm"
       }
     },
+
     {
       id: 10,
-      name: "90°",
-      logo: "/90-logo.png",
-      logoType: 'image',
-      unit: "Unit 213E",
-      floor: "First Floor",
-      category: "Specialty Store",
-      description: "Unique specialty store offering distinctive products and services. Visit us to discover our carefully curated selection of items.",
-      phone: "085 225 5911",
-      openingHours: {
-        monday: "9am - 4pm",
-        tuesday: "9am - 4pm",
-        wednesday: "9am - 4pm",
-        thursday: "9am - 4pm",
-        friday: "9am - 4pm",
-        saturday: "9:30am - 3:30pm",
-        sunday: "Closed"
-      }
-    },
-    {
-      id: 11,
       name: "Eir",
       logo: "/eir-logo.png",
       logoType: 'image',
@@ -254,7 +235,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 12,
+      id: 11,
       name: "Chemist Warehouse",
       logo: "/chemist-warehouse-logo.png",
       logoType: 'image',
@@ -274,7 +255,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 13,
+      id: 12,
       name: "The Pen Place",
       logo: "/the-pen-place.png",
       logoType: 'image',
@@ -294,7 +275,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 14,
+      id: 13,
       name: "Centra",
       logo: "/centra-logo.png",
       logoType: 'image',
@@ -314,7 +295,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 15,
+      id: 14,
       name: "Trespass",
       logo: "/trepass-logo.png",
       logoType: 'image',
@@ -334,7 +315,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 16,
+      id: 15,
       name: "Art & Hobby",
       logo: "/arthobby-logo.jpg",
       logoType: 'image',
@@ -354,7 +335,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 17,
+      id: 16,
       name: "Coastal Hair & Beauty",
       logo: "/coastal-logo.png",
       logoType: 'image',
@@ -374,7 +355,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 18,
+      id: 17,
       name: "Dempsey & Byrne Butchers",
       logo: "/butcher-logo.jpg",
       logoType: 'image',
@@ -394,7 +375,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 19,
+      id: 18,
       name: "O'Connor Opticians",
       logo: "/opticians-logo.png",
       logoType: 'image',
@@ -414,7 +395,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 20,
+      id: 19,
       name: "McCabes Pharmacy",
       logo: "/mccabes-logo.png",
       logoType: 'image',
@@ -434,7 +415,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 21,
+      id: 20,
       name: "Flying Tiger Copenhagen",
       logo: "/flying-tiger-copenhagen.jpg",
       logoType: 'image',
@@ -454,7 +435,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 22,
+      id: 21,
       name: "Images",
       logo: "/images-logo.png",
       logoType: 'image',
@@ -474,7 +455,7 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 23,
+      id: 22,
       name: "Dubray Bookshop",
       logo: "/dubray-logo.png",
       logoType: 'image',
@@ -494,936 +475,118 @@ const StoreGrid = () => {
       }
     },
     {
-      id: 24,
-      name: "Fashion Forward",
-      logo: "👗",
-      logoType: 'emoji',
-      unit: "Unit 2",
+      id: 23,
+      name: "Driver Theory Test Centre",
+      logo: "/rsa-logo.png",
+      logoType: 'image',
+      unit: "Unit TBA",
       floor: "Ground Floor",
-      category: "Fashion",
-      description: "Trendy fashion boutique offering the latest styles for men and women.",
-      phone: "01 2845991",
-      email: "info@fashionforward.ie",
+      category: "Government Services",
+      description: "Official RSA (Road Safety Authority) Driver Theory Test Centre providing theory tests for driving licenses, motorcycle licenses, and commercial vehicle licenses. Professional testing environment with modern facilities.",
+      phone: "(0818) 606 106",
       openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
+        monday: "9:45am - 5pm",
+        tuesday: "9:45am - 5pm",
+        wednesday: "9:45am - 5pm",
+        thursday: "9:45am - 5pm",
+        friday: "9:45am - 5pm",
+        saturday: "9:45am - 2pm",
+        sunday: "Closed"
+      }
+    },
+    {
+      id: 24,
+      name: "Fix A Phone",
+      logo: "/fix-a-phone.png",
+      logoType: 'image',
+      unit: "Unit 13",
+      floor: "Ground Floor",
+      category: "Mobile Phone Repair",
+      description: "Professional mobile phone repair service offering screen repairs, battery replacements, water damage fixes, and general phone maintenance. Expert technicians with quick turnaround times and warranty on all repairs.",
+      phone: "(01) 538 0972",
+      openingHours: {
+        monday: "10am - 6pm",
+        tuesday: "10am - 6pm",
+        wednesday: "10am - 6pm",
+        thursday: "10am - 6pm",
+        friday: "10am - 6pm",
+        saturday: "10am - 6pm",
+        sunday: "11am - 5pm"
       }
     },
     {
       id: 25,
-      name: "Beauty Bliss",
-      logo: "💄",
-      logoType: 'emoji',
-      unit: "Unit 4",
-      floor: "Ground Floor",
-      category: "Beauty",
-      description: "Premium beauty products and professional makeup services.",
-      phone: "01 2845993",
-      email: "hello@beautybliss.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 26,
-      name: "Home & Garden",
-      logo: "🏠",
-      logoType: 'emoji',
-      unit: "Unit 5",
-      floor: "Ground Floor",
-      category: "Home & Garden",
-      description: "Everything you need to create your perfect home and garden.",
-      phone: "01 2845994",
-      email: "info@homegarden.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 27,
-      name: "Sports Zone",
-      logo: "⚽",
-      logoType: 'emoji',
-      unit: "Unit 6",
-      floor: "Ground Floor",
-      category: "Sports",
-      description: "Sports equipment and activewear for all your fitness needs.",
-      phone: "01 2845995",
-      email: "team@sportszone.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 28,
-      name: "Book Corner",
-      logo: "📚",
-      logoType: 'emoji',
-      unit: "Unit 7",
-      floor: "Ground Floor",
-      category: "Books",
-      description: "Independent bookstore with a curated selection of books for all ages.",
-      phone: "01 2845996",
-      email: "books@bookcorner.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 29,
-      name: "Jewelry Box",
-      logo: "💍",
-      logoType: 'emoji',
-      unit: "Unit 8",
-      floor: "Ground Floor",
-      category: "Jewelry",
-      description: "Elegant jewelry and watches for every occasion.",
-      phone: "01 2845997",
-      email: "sparkle@jewelrybox.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 30,
-      name: "Kids World",
-      logo: "🧸",
-      logoType: 'emoji',
-      unit: "Unit 9",
-      floor: "Ground Floor",
-      category: "Children",
-      description: "Toys, clothing, and accessories for children of all ages.",
-      phone: "01 2845998",
-      email: "play@kidsworld.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 31,
-      name: "Coffee Corner",
-      logo: "☕",
-      logoType: 'emoji',
-      unit: "Unit 10",
-      floor: "Ground Floor",
-      category: "Café",
-      description: "Artisan coffee and delicious pastries in a cozy setting.",
-      phone: "01 2845999",
-      email: "brew@coffeecorner.ie",
-      openingHours: {
-        monday: "7am - 7pm",
-        tuesday: "7am - 7pm",
-        wednesday: "7am - 7pm",
-        thursday: "7am - 8pm",
-        friday: "7am - 8pm",
-        saturday: "8am - 7pm",
-        sunday: "8am - 6pm"
-      }
-    },
-    {
-      id: 32,
-      name: "Health & Wellness",
-      logo: "💊",
-      logoType: 'emoji',
-      unit: "Unit 11",
-      floor: "Ground Floor",
-      category: "Pharmacy",
-      description: "Full-service pharmacy with health and wellness products.",
-      phone: "01 2846000",
-      email: "care@healthwellness.ie",
-      openingHours: {
-        monday: "8am - 8pm",
-        tuesday: "8am - 8pm",
-        wednesday: "8am - 8pm",
-        thursday: "8am - 8pm",
-        friday: "8am - 8pm",
-        saturday: "8am - 6pm",
-        sunday: "10am - 4pm"
-      }
-    },
-    {
-      id: 33,
-      name: "Gift Gallery",
-      logo: "🎁",
-      logoType: 'emoji',
-      unit: "Unit 12",
-      floor: "Ground Floor",
-      category: "Gifts",
-      description: "Unique gifts and souvenirs for every occasion.",
-      phone: "01 2846001",
-      email: "gifts@giftgallery.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 34,
-      name: "Shoe Store",
-      logo: "👠",
-      logoType: 'emoji',
-      unit: "Unit 13",
+      name: "Flower Lane Boutique",
+      logo: "/flower-lane-logo.png",
+      logoType: 'image',
+      unit: "Unit 212",
       floor: "First Floor",
-      category: "Footwear",
-      description: "Stylish shoes and boots for all seasons.",
-      phone: "01 2846002",
-      email: "step@shoestore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 35,
-      name: "Optical Express",
-      logo: "👓",
-      logoType: 'emoji',
-      unit: "Unit 14",
-      floor: "First Floor",
-      category: "Optical",
-      description: "Professional eye care and stylish eyewear.",
-      phone: "01 2846003",
-      email: "vision@opticalexpress.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 36,
-      name: "Music Store",
-      logo: "🎵",
-      logoType: 'emoji',
-      unit: "Unit 15",
-      floor: "First Floor",
-      category: "Music",
-      description: "Musical instruments, sheet music, and audio equipment.",
-      phone: "01 2846004",
-      email: "music@musicstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 36,
-      name: "Pet Shop",
-      logo: "🐕",
-      logoType: 'emoji',
-      unit: "Unit 17",
-      floor: "First Floor",
-      category: "Pets",
-      description: "Pet food, toys, and accessories for your furry friends.",
-      phone: "01 2846006",
-      email: "pets@petshop.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 37,
-      name: "Bike Shop",
-      logo: "🚲",
-      logoType: 'emoji',
-      unit: "Unit 18",
-      floor: "First Floor",
-      category: "Cycling",
-      description: "Bicycles, parts, and cycling accessories.",
-      phone: "01 2846007",
-      email: "ride@bikeshop.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 38,
-      name: "Candy Store",
-      logo: "🍬",
-      logoType: 'emoji',
-      unit: "Unit 19",
-      floor: "First Floor",
-      category: "Confectionery",
-      description: "Sweet treats and traditional Irish candies.",
-      phone: "01 2846008",
-      email: "sweet@candystore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 39,
-      name: "Stationery Plus",
-      logo: "📝",
-      logoType: 'emoji',
-      unit: "Unit 20",
-      floor: "First Floor",
-      category: "Stationery",
-      description: "Office supplies and school essentials.",
-      phone: "01 2846009",
-      email: "write@stationeryplus.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 40,
-      name: "Hair Salon",
-      logo: "💇‍♀️",
-      logoType: 'emoji',
-      unit: "Unit 21",
-      floor: "First Floor",
-      category: "Hair",
-      description: "Professional hair styling and treatments.",
-      phone: "01 2846010",
-      email: "style@hairsalon.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "Closed"
-      }
-    },
-    {
-      id: 41,
-      name: "Nail Bar",
-      logo: "💅",
-      logoType: 'emoji',
-      unit: "Unit 22",
-      floor: "First Floor",
-      category: "Beauty",
-      description: "Professional nail care and nail art services.",
-      phone: "01 2846011",
-      email: "nails@nailbar.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "Closed"
-      }
-    },
-    {
-      id: 42,
-      name: "Mobile Phone Shop",
-      logo: "📱",
-      logoType: 'emoji',
-      unit: "Unit 23",
-      floor: "First Floor",
-      category: "Mobile",
-      description: "Latest mobile phones and mobile accessories.",
-      phone: "01 2846012",
-      email: "mobile@phoneshop.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 43,
-      name: "Computer Store",
-      logo: "🖥️",
-      logoType: 'emoji',
-      unit: "Unit 24",
-      floor: "First Floor",
-      category: "Computers",
-      description: "Desktop and laptop computers with expert advice.",
-      phone: "01 2846013",
-      email: "tech@computerstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 44,
-      name: "Toy Store",
-      logo: "🎮",
-      logoType: 'emoji',
-      unit: "Unit 25",
-      floor: "First Floor",
-      category: "Toys",
-      description: "Educational toys and games for children.",
-      phone: "01 2846014",
-      email: "play@toystore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 45,
-      name: "Baby Store",
-      logo: "👶",
-      logoType: 'emoji',
-      unit: "Unit 26",
-      floor: "First Floor",
-      category: "Baby",
-      description: "Everything you need for your little ones.",
-      phone: "01 2846015",
-      email: "baby@babystore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 46,
-      name: "Lingerie Boutique",
-      logo: "👙",
-      logoType: 'emoji',
-      unit: "Unit 27",
-      floor: "First Floor",
-      category: "Lingerie",
-      description: "Elegant lingerie and sleepwear collections.",
-      phone: "01 2846016",
-      email: "lingerie@boutique.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 47,
-      name: "Suit Store",
-      logo: "👔",
-      logoType: 'emoji',
-      unit: "Unit 28",
-      floor: "First Floor",
-      category: "Formal Wear",
-      description: "Professional suits and formal attire for men.",
-      phone: "01 2846017",
-      email: "formal@suitstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 48,
-      name: "Handbag Store",
-      logo: "👜",
-      logoType: 'emoji',
-      unit: "Unit 29",
-      floor: "First Floor",
-      category: "Accessories",
-      description: "Designer handbags and leather accessories.",
-      phone: "01 2846018",
-      email: "bags@handbagstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 49,
-      name: "Watch Store",
-      logo: "⌚",
-      logoType: 'emoji',
-      unit: "Unit 30",
-      floor: "First Floor",
-      category: "Watches",
-      description: "Luxury watches and timepieces for all occasions.",
-      phone: "01 2846019",
-      email: "time@watchstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 50,
-      name: "Perfume Store",
-      logo: "🌸",
-      logoType: 'emoji',
-      unit: "Unit 31",
-      floor: "First Floor",
-      category: "Fragrance",
-      description: "Exclusive perfumes and fragrances from around the world.",
-      phone: "01 2846020",
-      email: "scent@perfumestore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 51,
-      name: "Sunglasses Shop",
-      logo: "🕶️",
-      logoType: 'emoji',
-      unit: "Unit 32",
-      floor: "First Floor",
-      category: "Eyewear",
-      description: "Stylish sunglasses and designer frames.",
-      phone: "01 2846021",
-      email: "shade@sunglassesshop.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 52,
-      name: "Socks & Underwear",
-      logo: "🧦",
-      logoType: 'emoji',
-      unit: "Unit 33",
-      floor: "First Floor",
-      category: "Underwear",
-      description: "Comfortable socks and underwear essentials.",
-      phone: "01 2846022",
-      email: "comfort@socksunderwear.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 53,
-      name: "Swimwear Store",
-      logo: "🏊‍♀️",
-      logoType: 'emoji',
-      unit: "Unit 34",
-      floor: "First Floor",
-      category: "Swimwear",
-      description: "Swimwear and beach accessories for all ages.",
-      phone: "01 2846023",
-      email: "swim@swimwearstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 54,
-      name: "Winter Wear",
-      logo: "🧥",
-      logoType: 'emoji',
-      unit: "Unit 35",
-      floor: "First Floor",
-      category: "Outerwear",
-      description: "Coats, jackets, and winter accessories.",
-      phone: "01 2846024",
-      email: "warm@winterwear.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 55,
-      name: "Evening Wear",
-      logo: "👗",
-      logoType: 'emoji',
-      unit: "Unit 37",
-      floor: "First Floor",
-      category: "Evening Fashion",
-      description: "Elegant evening dresses and formal attire.",
-      phone: "01 2846026",
-      email: "elegant@eveningwear.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 56,
-      name: "Casual Wear",
-      logo: "👖",
-      logoType: 'emoji',
-      unit: "Unit 38",
-      floor: "First Floor",
-      category: "Casual Fashion",
-      description: "Comfortable and stylish casual clothing.",
-      phone: "01 2846027",
-      email: "casual@casualwear.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 57,
-      name: "Workout Gear",
-      logo: "🏃‍♀️",
-      logoType: 'emoji',
-      unit: "Unit 39",
-      floor: "First Floor",
-      category: "Athletic Wear",
-      description: "Performance workout clothing and gear.",
-      phone: "01 2846028",
-      email: "fitness@workoutgear.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 58,
-      name: "Party Supplies",
-      logo: "🎉",
-      logoType: 'emoji',
-      unit: "Unit 40",
-      floor: "First Floor",
-      category: "Party",
-      description: "Everything you need for the perfect party.",
-      phone: "01 2846029",
-      email: "party@partysupplies.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 59,
-      name: "Craft Store",
-      logo: "🧶",
-      logoType: 'emoji',
-      unit: "Unit 41",
-      floor: "First Floor",
-      category: "Crafts",
-      description: "Craft supplies and DIY materials.",
-      phone: "01 2846030",
-      email: "create@craftstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 60,
-      name: "Garden Center",
-      logo: "🌱",
-      logoType: 'emoji',
-      unit: "Unit 42",
-      floor: "First Floor",
-      category: "Garden",
-      description: "Plants, flowers, and gardening supplies.",
-      phone: "01 2846031",
-      email: "grow@gardencenter.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 61,
-      name: "Kitchen Store",
-      logo: "🍳",
-      logoType: 'emoji',
-      unit: "Unit 43",
-      floor: "First Floor",
-      category: "Kitchen",
-      description: "Kitchen appliances and cooking essentials.",
-      phone: "01 2846032",
-      email: "cook@kitchenstore.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 62,
-      name: "Bath & Body",
-      logo: "🛁",
-      logoType: 'emoji',
-      unit: "Unit 44",
-      floor: "First Floor",
-      category: "Bath & Body",
-      description: "Luxurious bath and body care products.",
-      phone: "01 2846033",
-      email: "pamper@bathbody.ie",
-      openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 6pm",
-        sunday: "12pm - 5pm"
-      }
-    },
-    {
-      id: 63,
-      name: "Shoe Repair",
-      logo: "🔧",
-      logoType: 'emoji',
-      unit: "Unit 45",
-      floor: "First Floor",
-      category: "Shoe Repair",
-      description: "Professional shoe repair and maintenance services.",
-      phone: "01 2846034",
-      email: "repair@shoerepair.ie",
+      category: "Florist & Gifts",
+      description: "Beautiful flower boutique offering fresh flowers, bouquets, arrangements, and gift items. Specializing in weddings, events, and everyday floral needs with expert florist services.",
+      phone: "085 275 8827",
+      website: "flowerlane.ie",
       openingHours: {
         monday: "9am - 6pm",
         tuesday: "9am - 6pm",
         wednesday: "9am - 6pm",
         thursday: "9am - 6pm",
         friday: "9am - 6pm",
-        saturday: "9am - 5pm",
+        saturday: "9am - 6pm",
         sunday: "Closed"
       }
     },
     {
-      id: 64,
-      name: "Dry Cleaners",
-      logo: "👔",
-      logoType: 'emoji',
-      unit: "Unit 46",
+      id: 26,
+      name: "Laptop Lab",
+      logo: "/laptop-lab-logo.jpg",
+      logoType: 'image',
+      unit: "Unit 219A",
       floor: "First Floor",
-      category: "Dry Cleaning",
-      description: "Professional dry cleaning and laundry services.",
-      phone: "01 2846035",
-      email: "clean@drycleaners.ie",
-      openingHours: {
-        monday: "8am - 6pm",
-        tuesday: "8am - 6pm",
-        wednesday: "8am - 6pm",
-        thursday: "8am - 6pm",
-        friday: "8am - 6pm",
-        saturday: "8am - 5pm",
-        sunday: "Closed"
-      }
-    },
-    {
-      id: 65,
-      name: "Photo Studio",
-      logo: "📸",
-      logoType: 'emoji',
-      unit: "Unit 47",
-      floor: "First Floor",
-      category: "Photography",
-      description: "Professional photography and portrait services.",
-      phone: "01 2846036",
-      email: "capture@photostudio.ie",
+      category: "Technology & IT Services",
+      description: "Professional laptop repair and IT services offering screen repairs, battery replacements, software fixes, and business IT support. Trusted walk-in repair service with expert technicians and warranty coverage.",
+      phone: "(01) 475 7177",
+      website: "https://backfromthefuture.ie/",
       openingHours: {
         monday: "10am - 6pm",
         tuesday: "10am - 6pm",
         wednesday: "10am - 6pm",
-        thursday: "10am - 8pm",
-        friday: "10am - 8pm",
-        saturday: "10am - 6pm",
+        thursday: "10am - 6pm",
+        friday: "10am - 6pm",
+        saturday: "10am - 5pm",
         sunday: "Closed"
       }
     },
     {
-      id: 66,
-      name: "Travel Agency",
-      logo: "✈️",
-      logoType: 'emoji',
-      unit: "Unit 48",
-      floor: "First Floor",
-      category: "Travel",
-      description: "Travel planning and booking services worldwide.",
-      phone: "01 2846037",
-      email: "travel@travelagency.ie",
+      id: 27,
+      name: "Best 4 Travel",
+      logo: "/best-4-travel.png",
+      logoType: 'image',
+      unit: "Unit 206",
+      floor: "Level 2",
+      category: "Tourism & Travel",
+      description: "Professional tourism and travel services offering holiday packages, flights, accommodation bookings, and travel planning. Expert travel advice and personalized service for all your travel needs.",
+      phone: "(01) 554 1001",
+      website: "https://www.best4travel.ie/",
       openingHours: {
-        monday: "9am - 6pm",
-        tuesday: "9am - 6pm",
-        wednesday: "9am - 6pm",
-        thursday: "9am - 8pm",
-        friday: "9am - 8pm",
-        saturday: "9am - 5pm",
+        monday: "9:30am - 6pm",
+        tuesday: "9:30am - 6pm",
+        wednesday: "9:30am - 6pm",
+        thursday: "9:30am - 6pm",
+        friday: "9:30am - 6pm",
+        saturday: "9:30am - 5:30pm",
         sunday: "Closed"
       }
     }
   ];
 
+  // Sort stores alphabetically by name
+  const sortedStores = [...stores].sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <>
       {/* Store Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stores.map((store) => (
+        {sortedStores.map((store) => (
           <div
             key={store.id}
             className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl cursor-pointer transform hover:scale-105 transition-all"
@@ -1574,8 +737,8 @@ const StoreGrid = () => {
                     onClick={() => window.open(`tel:${selectedStore.phone}`, '_self')}
                     className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
                   >
-                    Call Store
-                  </button>
+                  Call Store
+                </button>
                 )}
                 {selectedStore.email && (
                   <button 
