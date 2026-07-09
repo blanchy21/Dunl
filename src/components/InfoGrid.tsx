@@ -42,13 +42,6 @@ const InfoGrid = () => {
       externalLink: false
     },
     {
-      id: 4,
-      title: "Centre Map",
-      image: "/mall-2.png",
-      description: "Navigate the shopping centre with our interactive floor plans. Find stores, facilities, and amenities across all levels of the centre.",
-      link: "#centre-map" // Will show modal with centre map
-    },
-    {
       id: 5,
       title: "Accessibility",
       image: "/disabled.jpg",
@@ -116,32 +109,6 @@ const InfoGrid = () => {
               <p className="text-sm text-gray-700">
                 <strong>Note:</strong> Individual store hours may vary. Please check with individual stores for their specific opening times.
               </p>
-            </div>
-          </div>
-        );
-      
-      case 4: // Centre Map
-        return (
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Centre Map & Floor Plans</h3>
-            <div className="space-y-4">
-              <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Interactive Centre Map Coming Soon</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-semibold text-blue-900">Ground Floor</h4>
-                  <p className="text-sm text-blue-700">Main entrance, food court, major retailers</p>
-                </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <h4 className="font-semibold text-green-900">First Floor</h4>
-                  <p className="text-sm text-green-700">Fashion, beauty, services</p>
-                </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <h4 className="font-semibold text-purple-900">Second Floor</h4>
-                  <p className="text-sm text-purple-700">Offices, additional services</p>
-                </div>
-              </div>
             </div>
           </div>
         );
