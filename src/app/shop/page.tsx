@@ -17,7 +17,7 @@ export default function ShopPage() {
         title="Shop Directory"
         eyebrow="25+ Stores"
         subtitle="Discover the shops, services and boutiques at Dún Laoghaire Shopping Centre."
-        image="/hero-shop.png"
+        image="/hero-shop.jpg"
         height="half"
         overlay="dark"
       />

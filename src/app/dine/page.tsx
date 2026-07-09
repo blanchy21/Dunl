@@ -17,7 +17,7 @@ export default function DinePage() {
         title="Dining & Cafés"
         eyebrow="Eat & Drink"
         subtitle="Coffee, a quick bite or a relaxed lunch — dining options in the heart of the centre."
-        image="/dine-hero.png"
+        image="/dine-hero.jpg"
         height="half"
         overlay="dark"
       />

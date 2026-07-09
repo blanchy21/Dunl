@@ -49,7 +49,7 @@ export default function ParkingPage() {
         title="Parking"
         eyebrow="Getting Here"
         subtitle="A secure multi-storey car park on site, operated by APCOA."
-        image="/hero-carpark.png"
+        image="/hero-carpark.jpg"
         height="medium"
         overlay="dark"
       />

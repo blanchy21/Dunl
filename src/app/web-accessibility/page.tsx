@@ -11,7 +11,7 @@ export default function WebAccessibilityPage() {
         title="Web Accessibility"
         eyebrow="For Everyone"
         subtitle="We’re committed to a website everyone can use, regardless of ability or technology."
-        image="/front.png"
+        image="/front.jpg"
         height="half"
         overlay="dark"
       />

@@ -51,7 +51,7 @@ const InfoGrid = () => {
     {
       id: 6,
       title: "History",
-      image: "/front.png",
+      image: "/front.jpg",
       description: "Discover the rich history of Dun Laoghaire Shopping Centre. Learn about our heritage, development, and role in the local community over the years.",
       link: "#history" // Will show modal with history info
     },

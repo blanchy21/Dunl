@@ -16,7 +16,7 @@ export default function HistoryPage() {
         title="Our History"
         eyebrow="Heritage"
         subtitle="The story of a centre at the heart of Dublin’s historic coastal town."
-        image="/history-hero.png"
+        image="/history-hero.jpg"
         height="medium"
         overlay="dark"
       />

@@ -55,7 +55,7 @@ export default function Home() {
               className="group relative overflow-hidden rounded-2xl aspect-[4/3] md:row-span-2 md:aspect-auto md:min-h-[520px] lg:min-h-[600px]"
             >
               <Image
-                src="/hero-shop.png"
+                src="/hero-shop.jpg"
                 alt={`Shops at ${siteConfig.siteName}`}
                 fill
                 className="object-cover card-image-zoom"
@@ -82,7 +82,7 @@ export default function Home() {
             {/* Dine */}
             <Link href="/dine" className="group relative overflow-hidden rounded-2xl aspect-[4/3] md:aspect-auto">
               <Image
-                src="/dine-hero.png"
+                src="/dine-hero.jpg"
                 alt={`Dining at ${siteConfig.siteName}`}
                 fill
                 className="object-cover card-image-zoom"
