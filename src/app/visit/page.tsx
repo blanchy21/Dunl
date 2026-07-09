@@ -1,280 +1,222 @@
 import Navigation from '../../components/Navigation';
+import Hero from '../../components/Hero';
+import Footer from '../../components/Footer';
+import Link from 'next/link';
+import { siteConfig } from '../../config/site.config';
+
+export const metadata = {
+  title: 'Visit Us',
+  description: 'How to get to Dún Laoghaire Shopping Centre — by DART, bus, car or taxi — plus opening hours, parking and accessibility.',
+};
+
+const directions = [
+  {
+    title: 'DART Train',
+    tag: 'Recommended',
+    points: [
+      'Take the DART from Connolly, Tara Street or Pearse Station',
+      'Travel southbound towards Bray / Greystones',
+      'Get off at Dún Laoghaire Station',
+      'Walk 5 minutes to the centre (follow the signs)',
+    ],
+    note: 'Journey time: ~25 minutes from the city centre',
+  },
+  {
+    title: 'Dublin Bus',
+    points: [
+      'Route 7 from the city centre (O’Connell Street)',
+      'Route 46A from Phoenix Park via the city centre',
+      'Get off at the Dún Laoghaire stop',
+    ],
+    note: 'Journey time: ~45–60 minutes from the city centre',
+  },
+  {
+    title: 'By Car',
+    points: [
+      'Take the M50 southbound',
+      'Exit at Junction 15 (Dundrum)',
+      'Follow signs for Dún Laoghaire via Stillorgan Road',
+      'Continue on Marine Road to the centre',
+    ],
+    note: 'Journey time: ~30–45 minutes (traffic depending)',
+  },
+  {
+    title: 'Taxi',
+    points: [
+      'Available from any city centre location',
+      'Ask for “Dún Laoghaire Shopping Centre”',
+    ],
+    note: 'Approximate fare: €25–35 from the city centre',
+  },
+];
+
+const openingHours = [
+  { day: 'Monday – Wednesday', hours: '9am – 6pm' },
+  { day: 'Thursday – Friday', hours: '9am – 9pm' },
+  { day: 'Saturday', hours: '9am – 6pm' },
+  { day: 'Sunday', hours: '12pm – 6pm' },
+];
+
+function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
+  return (
+    <div className="mb-6">
+      <span className="text-dl-teal text-xs tracking-[0.25em] uppercase font-medium">{eyebrow}</span>
+      <h2 className="mt-2 text-2xl sm:text-3xl font-display font-bold text-dl-navy tracking-tight">{title}</h2>
+    </div>
+  );
+}
 
 export default function VisitPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      {/* Hero Section */}
-      <div className="relative h-[400px] overflow-hidden">
-        {/* Background Image - using visit-bandstand.jpg */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/visit-bandstand.jpg')"
-          }}
-        >
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="text-center text-white px-4">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 font-display">
-              Visit Us
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Plan your visit to Dun Laoghaire Shopping Centre on the beautiful Dublin coast
-            </p>
-          </div>
-        </div>
-      </div>
+      <Hero
+        title="Visit Us"
+        eyebrow="Plan Your Visit"
+        subtitle="On Marine Road, a 5-minute walk from the DART — here’s how to find us."
+        image="/visit-bandstand.jpg"
+        height="medium"
+        overlay="dark"
+      />
 
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          
-          {/* Address Section */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Address</h2>
-            <div className="text-lg text-gray-700">
-              <p className="mb-2"><strong>Dun Laoghaire Shopping Centre</strong></p>
-              <p>Marine Road</p>
-              <p>Dun Laoghaire</p>
-              <p>Co. Dublin</p>
-              <p className="text-blue-600 font-medium">A96 X4X0</p>
-            </div>
-          </div>
+      <div className="bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 space-y-8">
 
-          {/* Interactive Map Section */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Interactive Map</h2>
-            <div className="space-y-4">
-              <p className="text-gray-700">
-                Use the map below to get directions from your location to Dun Laoghaire Shopping Centre.
-              </p>
-              
-              {/* Google Maps Embed */}
-              <div className="relative w-full h-96 rounded-lg overflow-hidden">
+          {/* Address + Map */}
+          <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div>
+                <SectionHeading eyebrow="Find Us" title="Address" />
+                <div className="text-gray-600 leading-relaxed">
+                  <p className="font-semibold text-dl-navy">{siteConfig.fullAddress.name}</p>
+                  <p>{siteConfig.fullAddress.street}</p>
+                  <p>{siteConfig.fullAddress.town}, {siteConfig.fullAddress.county}</p>
+                  <p className="text-dl-teal font-medium">{siteConfig.fullAddress.eircode}</p>
+                </div>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://www.google.com/maps/place/Dun+Laoghaire+Shopping+Centre,+Marine+Road,+Dun+Laoghaire,+Co.+Dublin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-dl-navy text-white py-3 px-5 rounded-lg hover:bg-dl-blue transition-colors font-medium min-h-[44px]"
+                  >
+                    Get Directions
+                  </a>
+                  <Link
+                    href="/parking"
+                    className="inline-flex items-center justify-center border border-dl-navy text-dl-navy py-3 px-5 rounded-lg hover:bg-dl-navy hover:text-white transition-colors font-medium min-h-[44px]"
+                  >
+                    Parking Info
+                  </Link>
+                </div>
+              </div>
+              <div className="relative w-full h-64 md:h-full min-h-[240px] rounded-xl overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2387.1234567890123!2d-6.1367!3d53.2944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c0c0c0c0c0%3A0x0!2zNTPCsDE3JzM5LjgiTiA2wrAwOCcxMi4xIlc!5e0!3m2!1sen!2sie!4v1234567890123"
+                  src="https://www.google.com/maps?q=Dun%20Laoghaire%20Shopping%20Centre%2C%20Marine%20Road%2C%20Dun%20Laoghaire&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Dun Laoghaire Shopping Centre Location"
-                  className="rounded-lg"
-                ></iframe>
-              </div>
-
-              {/* Quick Directions Buttons */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-                <a
-                  href="https://www.google.com/maps/dir/Dublin+City+Centre,+Dublin,+Ireland/Dun+Laoghaire+Shopping+Centre,+Marine+Road,+Dun+Laoghaire,+Co.+Dublin,+Ireland/@53.2944,-6.1367,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48670e80ea7ac2f3:0xa00c7a9973171a0!2m2!1d-6.2603!2d53.3498!1m5!1m1!1s0x48670c0c0c0c0c0:0x0!2m2!1d-6.1367!2d53.2944!3e3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg text-center transition-colors duration-200 flex items-center justify-center"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  From City Centre
-                </a>
-                
-                <a
-                  href="https://www.google.com/maps/dir/Dublin+Airport,+Dublin,+Ireland/Dun+Laoghaire+Shopping+Centre,+Marine+Road,+Dun+Laoghaire,+Co.+Dublin,+Ireland/@53.2944,-6.1367,12z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x48670e80ea7ac2f3:0xa00c7a9973171a0!2m2!1d-6.2603!2d53.3498!1m5!1m1!1s0x48670c0c0c0c0c0:0x0!2m2!1d-6.1367!2d53.2944!3e3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-4 rounded-lg text-center transition-colors duration-200 flex items-center justify-center"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  From Airport
-                </a>
-                
-                <a
-                  href="https://www.google.com/maps/place/Dun+Laoghaire+Shopping+Centre,+Marine+Road,+Dun+Laoghaire,+Co.+Dublin,+Ireland/@53.2944,-6.1367,17z/data=!3m1!4b1!4m5!3m4!1s0x48670c0c0c0c0c0:0x0!2m2!1d-6.1367!2d53.2944!3e3"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 rounded-lg text-center transition-colors duration-200 flex items-center justify-center"
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m0 0L9 7" />
-                  </svg>
-                  View on Maps
-                </a>
-              </div>
-
-              {/* Map Instructions */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-4">
-                <h4 className="font-medium text-blue-900 mb-2">How to use the map:</h4>
-                <ul className="text-sm text-blue-800 space-y-1">
-                  <li>• <strong>Click the direction buttons above</strong> to get turn-by-turn directions from popular starting points</li>
-                  <li>• <strong>Use the map controls</strong> to zoom in/out and explore the area</li>
-                  <li>• <strong>Click and drag</strong> to move around the map</li>
-                  <li>• <strong>Right-click</strong> to get directions from any location</li>
-                </ul>
+                  title="Dún Laoghaire Shopping Centre location"
+                />
               </div>
             </div>
+          </section>
+
+          {/* Directions */}
+          <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+            <SectionHeading eyebrow="Getting Here" title="Directions" />
+            <div className="grid sm:grid-cols-2 gap-5">
+              {directions.map((d) => (
+                <div key={d.title} className="rounded-xl border border-gray-100 bg-gray-50 p-5">
+                  <div className="flex items-center gap-3 mb-3">
+                    <h3 className="font-display text-lg font-bold text-dl-navy">{d.title}</h3>
+                    {d.tag && (
+                      <span className="text-[10px] tracking-[0.15em] uppercase font-semibold bg-dl-teal/10 text-dl-teal px-2.5 py-1 rounded-full">
+                        {d.tag}
+                      </span>
+                    )}
+                  </div>
+                  <ul className="space-y-1.5 text-sm text-gray-600">
+                    {d.points.map((p, i) => (
+                      <li key={i} className="flex gap-2">
+                        <span className="text-dl-gold mt-1.5 w-1 h-1 rounded-full bg-dl-gold flex-shrink-0" />
+                        <span>{p}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 text-sm font-medium text-dl-blue">{d.note}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Hours + Accessibility */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+              <SectionHeading eyebrow="When We're Open" title="Opening Hours" />
+              <div className="rounded-xl border border-gray-100 bg-gray-50 p-5 space-y-2.5">
+                {openingHours.map(({ day, hours }) => (
+                  <div key={day} className="flex justify-between text-sm sm:text-base">
+                    <span className="text-gray-500">{day}</span>
+                    <span className="font-medium text-dl-navy">{hours}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-3 text-xs text-gray-400 italic">*Individual store hours may vary.</p>
+            </section>
+
+            <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8">
+              <SectionHeading eyebrow="For Everyone" title="Accessibility" />
+              <ul className="space-y-2.5 text-sm sm:text-base text-gray-600">
+                {[
+                  'Wheelchair accessible throughout',
+                  'Accessible toilets on all levels',
+                  'Lifts to all floors',
+                  'Designated accessible parking spaces',
+                  'Step-free access from the DART station',
+                  'Drop-off zone at the main entrance',
+                ].map((item) => (
+                  <li key={item} className="flex gap-2.5">
+                    <svg className="w-5 h-5 text-dl-teal flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
           </div>
 
-          {/* Directions from Dublin City Centre */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Directions from Dublin City Centre</h2>
-            
-            {/* DART Train */}
-            <div className="mb-6">
-              <h3 className="text-xl font-medium text-gray-800 mb-3 flex items-center">
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium mr-3">Recommended</span>
-                DART Train
-              </h3>
-              <div className="ml-6">
-                <p className="text-gray-700 mb-2">• Take the DART from Dublin Connolly, Tara Street, or Pearse Station</p>
-                <p className="text-gray-700 mb-2">• Travel southbound towards Bray/Greystones</p>
-                <p className="text-gray-700 mb-2">• Get off at <strong>Dun Laoghaire Station</strong></p>
-                <p className="text-gray-700 mb-2">• Walk 5 minutes to the shopping centre (follow signs)</p>
-                <p className="text-blue-600 font-medium">Journey time: ~25 minutes from city centre</p>
-              </div>
+          {/* Contact */}
+          <section className="bg-dl-navy rounded-2xl p-8 sm:p-10 text-center">
+            <span className="text-dl-gold text-xs tracking-[0.25em] uppercase font-medium">Need Help?</span>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">Get in Touch</h2>
+            <p className="mt-3 text-white/60 max-w-lg mx-auto">
+              Our information desk is on the ground floor during shopping hours, with maps and directions available.
+            </p>
+            <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, '')}`}
+                className="inline-flex items-center justify-center bg-dl-gold text-dl-navy py-3 px-6 rounded-lg hover:opacity-90 transition-opacity font-semibold min-h-[44px]"
+              >
+                {siteConfig.contact.phone}
+              </a>
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="inline-flex items-center justify-center border border-white/20 text-white py-3 px-6 rounded-lg hover:bg-white/10 transition-colors font-medium min-h-[44px]"
+              >
+                {siteConfig.contact.email}
+              </a>
             </div>
-
-            {/* Bus */}
-            <div className="mb-6">
-              <h3 className="text-xl font-medium text-gray-800 mb-3">Dublin Bus</h3>
-              <div className="ml-6">
-                <p className="text-gray-700 mb-2">• <strong>Route 7</strong> from Dublin City Centre (O&apos;Connell Street)</p>
-                <p className="text-gray-700 mb-2">• <strong>Route 46A</strong> from Phoenix Park via city centre</p>
-                <p className="text-gray-700 mb-2">• Get off at Dun Laoghaire stop</p>
-                <p className="text-blue-600 font-medium">Journey time: ~45-60 minutes from city centre</p>
-              </div>
-            </div>
-
-            {/* Car */}
-            <div className="mb-6">
-              <h3 className="text-xl font-medium text-gray-800 mb-3">By Car</h3>
-              <div className="ml-6">
-                <p className="text-gray-700 mb-2">• Take the M50 southbound</p>
-                <p className="text-gray-700 mb-2">• Exit at Junction 15 (Dundrum)</p>
-                <p className="text-gray-700 mb-2">• Follow signs for Dun Laoghaire via Stillorgan Road</p>
-                <p className="text-gray-700 mb-2">• Continue on Marine Road to the shopping centre</p>
-                <p className="text-blue-600 font-medium">Journey time: ~30-45 minutes (depending on traffic)</p>
-              </div>
-            </div>
-
-            {/* Taxi */}
-            <div className="mb-6">
-              <h3 className="text-xl font-medium text-gray-800 mb-3">Taxi</h3>
-              <div className="ml-6">
-                <p className="text-gray-700 mb-2">• Available from any Dublin city centre location</p>
-                <p className="text-gray-700 mb-2">• Ask for &quot;Dun Laoghaire Shopping Centre&quot;</p>
-                <p className="text-blue-600 font-medium">Approximate fare: €25-35 from city centre</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Opening Hours */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Opening Hours</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Shopping Centre</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Monday - Wednesday:</span> 9:00 AM - 6:00 PM</p>
-                  <p><span className="font-medium">Thursday - Friday:</span> 9:00 AM - 9:00 PM</p>
-                  <p><span className="font-medium">Saturday:</span> 9:00 AM - 6:00 PM</p>
-                  <p><span className="font-medium">Sunday:</span> 12:00 PM - 6:00 PM</p>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Individual Stores</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Hours may vary</span> by store</p>
-                  <p>Please check individual store listings</p>
-                  <p>Most stores open 9:00 AM - 6:00 PM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Parking Information */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Parking</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Shopping Centre Parking</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Free parking</span> for shoppers</p>
-                  <p>Multi-level car park with 500+ spaces</p>
-                  <p>Accessible parking available</p>
-                  <p>Maximum stay: 4 hours</p>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Street Parking</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>Pay & Display parking available</p>
-                  <p>Marine Road and surrounding streets</p>
-                  <p>€2 per hour (Monday - Saturday)</p>
-                  <p>Free on Sundays</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Accessibility */}
-          <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Accessibility</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Facilities</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>• Wheelchair accessible throughout</p>
-                  <p>• Accessible toilets on all levels</p>
-                  <p>• Elevators to all floors</p>
-                  <p>• Assistance available on request</p>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Getting Here</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>• DART station has step-free access</p>
-                  <p>• Bus stops are wheelchair accessible</p>
-                  <p>• Designated accessible parking spaces</p>
-                  <p>• Drop-off zone at main entrance</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Information */}
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Need Help?</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Information Desk</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p>Located on the ground floor</p>
-                  <p>Open during shopping hours</p>
-                  <p>Maps and directions available</p>
-                  <p>Tourist information provided</p>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-800 mb-3">Contact</h3>
-                <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Phone:</span> +353 1 284 0000</p>
-                  <p><span className="font-medium">Email:</span> info@dunlaoghairecentre.ie</p>
-                  <p><span className="font-medium">Emergency:</span> 112</p>
-                  <p><span className="font-medium">Lost & Found:</span> Information Desk</p>
-                </div>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </div>
+
+      <Footer />
     </main>
   );
 }

@@ -582,110 +582,125 @@ const StoreGrid = () => {
   // Sort stores alphabetically by name
   const sortedStores = [...stores].sort((a, b) => a.name.localeCompare(b.name));
 
+  const todayKey = (['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'] as const)[new Date().getDay()];
+
+  const handleKeyDown = (e: React.KeyboardEvent, store: Store) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      setSelectedStore(store);
+    }
+  };
+
   return (
     <>
       {/* Store Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {sortedStores.map((store) => (
-          <div
-            key={store.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl cursor-pointer transform hover:scale-105 transition-all"
-            onClick={() => setSelectedStore(store)}
-          >
-            {/* Store Logo */}
-            <div className="h-64 flex items-center justify-center bg-white">
-              {store.logoType === 'image' ? (
-                <Image
-                  src={store.logo}
-                  alt={`${store.name} logo`}
-                  width={200}
-                  height={200}
-                  className="object-contain"
-                />
-              ) : (
-                <span className="text-8xl">{store.logo}</span>
-              )}
-            </div>
-            
-            {/* Store Info */}
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{store.name}</h3>
-              <div className="space-y-1 text-sm text-gray-600">
-                <p><span className="font-medium">Floor:</span> {store.floor}</p>
-                <p><span className="font-medium">Phone:</span> {store.phone || 'N/A'}</p>
-                {store.openingHours && (
-                  <p><span className="font-medium">Open Today:</span> 
-                    <span className="font-medium text-gray-900 ml-1">
-                      {(() => {
-                        const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-                        const today = days[new Date().getDay()];
-                        const todayHours = store.openingHours[today as keyof typeof store.openingHours];
-                        return todayHours || 'Closed';
-                      })()}
-                    </span>
-                  </p>
+      <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+        {sortedStores.map((store) => {
+          const todayHours = store.openingHours?.[todayKey] || 'Closed';
+          return (
+            <div
+              key={store.id}
+              className="group bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-xl hover:border-dl-gold/40 cursor-pointer transition-all duration-300 touch-manipulation focus:outline-none focus:ring-2 focus:ring-dl-gold/50"
+              onClick={() => setSelectedStore(store)}
+              onKeyDown={(e) => handleKeyDown(e, store)}
+              tabIndex={0}
+              role="button"
+              aria-label={`View details for ${store.name}`}
+            >
+              {/* Store Logo */}
+              <div className="h-40 xs:h-44 sm:h-48 md:h-56 flex items-center justify-center bg-white p-4 border-b border-gray-50">
+                {store.logoType === 'image' ? (
+                  <Image
+                    src={store.logo}
+                    alt={`${store.name} logo`}
+                    width={200}
+                    height={200}
+                    className="object-contain w-full h-full max-h-32 group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <span className="text-5xl sm:text-6xl md:text-7xl">{store.logo}</span>
                 )}
               </div>
+
+              {/* Store Info */}
+              <div className="p-4">
+                <h3 className="text-base sm:text-lg font-display font-bold text-dl-navy mb-1.5 line-clamp-2">{store.name}</h3>
+                <p className="text-xs text-dl-teal tracking-wide uppercase font-medium mb-2">{store.category}</p>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-400">Today</span>
+                  <span className={`font-medium ${todayHours === 'Closed' ? 'text-red-500' : 'text-dl-navy'}`}>{todayHours}</span>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Store Detail Modal */}
       {selectedStore && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-gray-50 rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">{selectedStore.name}</h2>
-                <button
-                  onClick={() => setSelectedStore(null)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
+        <div
+          className="fixed inset-0 bg-dl-navy/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 z-50 overflow-y-auto"
+          onClick={() => setSelectedStore(null)}
+          onKeyDown={(e) => { if (e.key === 'Escape') setSelectedStore(null); }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="store-modal-title"
+        >
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full my-4 sm:my-8 max-h-[calc(100vh-2rem)] sm:max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between gap-2 p-4 sm:p-6 border-b border-gray-100 sticky top-0 bg-white z-10">
+              <div>
+                <h2 id="store-modal-title" className="text-lg sm:text-xl md:text-2xl font-display font-bold text-dl-navy">{selectedStore.name}</h2>
+                <p className="text-xs sm:text-sm text-dl-teal tracking-wide uppercase font-medium mt-0.5">{selectedStore.category}</p>
               </div>
+              <button
+                onClick={() => setSelectedStore(null)}
+                className="text-gray-400 hover:text-dl-navy transition-colors flex-shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-gray-100"
+                aria-label="Close"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
 
+            <div className="p-4 sm:p-6">
               {/* Store Logo */}
-              <div className="h-48 rounded-lg flex items-center justify-center mb-4 overflow-hidden bg-white">
+              <div className="h-28 sm:h-40 rounded-xl flex items-center justify-center mb-5 overflow-hidden bg-gray-50 p-4">
                 {selectedStore.logoType === 'image' ? (
                   <Image
                     src={selectedStore.logo}
                     alt={`${selectedStore.name} logo`}
-                    width={180}
-                    height={180}
+                    width={200}
+                    height={200}
                     className="object-contain max-w-full max-h-full"
                   />
                 ) : (
-                  <span className="text-8xl">{selectedStore.logo}</span>
+                  <span className="text-6xl sm:text-8xl">{selectedStore.logo}</span>
                 )}
               </div>
 
               {/* Store Details */}
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between">
-                  <span className="font-medium text-gray-700">Unit:</span>
-                  <span className="text-gray-900">{selectedStore.unit}</span>
+              <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3 mb-6 text-sm sm:text-base">
+                <div className="flex justify-between border-b border-gray-100 pb-2">
+                  <span className="font-medium text-gray-500">Unit</span>
+                  <span className="text-dl-navy text-right">{selectedStore.unit}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="font-medium text-gray-700">Floor:</span>
-                  <span className="text-gray-900">{selectedStore.floor}</span>
+                <div className="flex justify-between border-b border-gray-100 pb-2">
+                  <span className="font-medium text-gray-500">Floor</span>
+                  <span className="text-dl-navy text-right">{selectedStore.floor}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="font-medium text-gray-700">Category:</span>
-                  <span className="text-gray-900">{selectedStore.category}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-medium text-gray-700">Phone:</span>
-                  <span className="text-gray-900">{selectedStore.phone || 'N/A'}</span>
+                <div className="flex justify-between border-b border-gray-100 pb-2">
+                  <span className="font-medium text-gray-500">Phone</span>
+                  <span className="text-dl-navy text-right break-words">{selectedStore.phone || 'N/A'}</span>
                 </div>
                 {selectedStore.email && (
-                  <div className="flex justify-between">
-                    <span className="font-medium text-gray-700">Email:</span>
-                    <span className="text-gray-900">{selectedStore.email}</span>
+                  <div className="flex justify-between border-b border-gray-100 pb-2">
+                    <span className="font-medium text-gray-500">Email</span>
+                    <span className="text-dl-navy text-right break-all">{selectedStore.email}</span>
                   </div>
                 )}
               </div>
@@ -693,65 +708,56 @@ const StoreGrid = () => {
               {/* Opening Hours */}
               {selectedStore.openingHours && (
                 <div className="mb-6">
-                  <h4 className="font-medium text-gray-700 mb-3">Opening Hours:</h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Monday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.monday}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Tuesday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.tuesday}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Wednesday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.wednesday}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Thursday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.thursday}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Friday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.friday}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Saturday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.saturday}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Sunday:</span>
-                      <span className="text-gray-900 font-medium">{selectedStore.openingHours.sunday}</span>
-                    </div>
+                  <h4 className="font-display font-bold text-dl-navy mb-3">Opening Hours</h4>
+                  <div className="rounded-xl bg-gray-50 p-4 space-y-2 text-sm">
+                    {(
+                      [
+                        ['Monday', selectedStore.openingHours.monday],
+                        ['Tuesday', selectedStore.openingHours.tuesday],
+                        ['Wednesday', selectedStore.openingHours.wednesday],
+                        ['Thursday', selectedStore.openingHours.thursday],
+                        ['Friday', selectedStore.openingHours.friday],
+                        ['Saturday', selectedStore.openingHours.saturday],
+                        ['Sunday', selectedStore.openingHours.sunday],
+                      ] as const
+                    ).map(([day, hours]) => (
+                      <div key={day} className="flex justify-between">
+                        <span className="text-gray-500">{day}</span>
+                        <span className={`font-medium ${hours === 'Closed' ? 'text-red-500' : 'text-dl-navy'}`}>{hours}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               )}
 
               {/* Description */}
-              <p className="text-gray-600 mb-6">{selectedStore.description}</p>
+              <p className="text-gray-600 mb-6 leading-relaxed whitespace-pre-line">{selectedStore.description}</p>
 
               {/* Actions */}
-              <div className="flex space-x-3">
+              <div className="flex flex-col sm:flex-row gap-3">
                 {selectedStore.phone && (
-                  <button 
+                  <button
                     onClick={() => window.open(`tel:${selectedStore.phone}`, '_self')}
-                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                    className="flex-1 bg-dl-navy text-white py-3 px-4 rounded-lg hover:bg-dl-blue transition-colors font-medium min-h-[44px]"
+                    aria-label={`Call ${selectedStore.name}`}
                   >
-                  Call Store
-                </button>
+                    Call Store
+                  </button>
                 )}
                 {selectedStore.email && (
-                  <button 
+                  <button
                     onClick={() => window.open(`mailto:${selectedStore.email}`, '_self')}
-                    className="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
+                    className="flex-1 bg-dl-teal text-white py-3 px-4 rounded-lg hover:opacity-90 transition-opacity font-medium min-h-[44px]"
+                    aria-label={`Email ${selectedStore.name}`}
                   >
                     Email Store
                   </button>
                 )}
                 {selectedStore.website && (
-                  <button 
+                  <button
                     onClick={() => window.open(selectedStore.website, '_blank', 'noopener,noreferrer')}
-                    className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors"
+                    className="flex-1 border border-dl-navy text-dl-navy py-3 px-4 rounded-lg hover:bg-dl-navy hover:text-white transition-colors font-medium min-h-[44px]"
+                    aria-label={`Visit ${selectedStore.name} website`}
                   >
                     Visit Website
                   </button>
