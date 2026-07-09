@@ -391,7 +391,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Children's Privacy */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
-            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Children's Privacy</h2>
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Children&apos;s Privacy</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Our services are not directed to children under 16 years of age. We do not 
