@@ -1,34 +1,34 @@
 import Navigation from '../../components/Navigation';
+import Hero from '../../components/Hero';
 import Footer from '../../components/Footer';
 
 export default function CookiesPolicyPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 font-display">
-              Cookie Policy
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              This Cookie Policy explains how Dun Laoghaire Shopping Centre uses cookies 
-              and similar technologies on our website in compliance with EU regulations.
-            </p>
-            <p className="text-sm text-gray-500 mt-4">
-              Last updated: {new Date().toLocaleDateString('en-GB', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
-            </p>
-          </div>
+
+      <Hero
+        title="Cookie Policy"
+        eyebrow="Legal"
+        subtitle="How we use cookies and similar technologies on this website, in line with EU rules."
+        image="/mall-1.jpg"
+        height="half"
+        overlay="dark"
+      />
+
+      <div className="bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <p className="text-sm text-gray-400 mb-10 text-center">
+            Last updated: {new Date().toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </p>
 
           {/* What Are Cookies */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">What Are Cookies?</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">What Are Cookies?</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Cookies are small text files that are placed on your computer or mobile device 
@@ -44,8 +44,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* How We Use Cookies */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">How We Use Cookies</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">How We Use Cookies</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Dun Laoghaire Shopping Centre uses cookies to improve your experience on our 
@@ -57,8 +57,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* Types of Cookies */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Types of Cookies We Use</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Types of Cookies We Use</h2>
             
             {/* Essential Cookies */}
             <div className="mb-8">
@@ -167,8 +167,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* Cookie Management */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Managing Your Cookie Preferences</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Managing Your Cookie Preferences</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 You have the right to choose whether to accept or reject cookies. You can 
@@ -207,8 +207,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* Third Party Cookies */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Third-Party Cookies</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Third-Party Cookies</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Some cookies on our site are set by third-party services that appear on our pages. 
@@ -228,8 +228,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* Legal Basis */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Legal Basis for Processing</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Legal Basis for Processing</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Under the General Data Protection Regulation (GDPR) and ePrivacy Directive, 
@@ -261,8 +261,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* Your Rights */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Your Rights</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Under GDPR, you have the following rights regarding cookies and your personal data:
@@ -293,8 +293,8 @@ export default function CookiesPolicyPage() {
           </div>
 
           {/* Updates to Policy */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Updates to This Policy</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Updates to This Policy</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We may update this Cookie Policy from time to time to reflect changes in our 

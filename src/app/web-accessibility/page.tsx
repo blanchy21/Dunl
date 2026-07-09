@@ -1,27 +1,27 @@
 import Navigation from '../../components/Navigation';
+import Hero from '../../components/Hero';
 import Footer from '../../components/Footer';
 
 export default function WebAccessibilityPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 font-display">
-              Web Accessibility
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Dun Laoghaire Shopping Centre is committed to providing an accessible website 
-              that can be used by everyone, regardless of ability or technology.
-            </p>
-          </div>
+
+      <Hero
+        title="Web Accessibility"
+        eyebrow="For Everyone"
+        subtitle="We’re committed to a website everyone can use, regardless of ability or technology."
+        image="/front.png"
+        height="half"
+        overlay="dark"
+      />
+
+      <div className="bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
 
           {/* Main Accessibility Statement */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Statement</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Accessibility Statement</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Our website can be viewed on a range of different screen sizes and the size of 
@@ -34,7 +34,7 @@ export default function WebAccessibilityPage() {
                 you experience any problem accessing the site then please{' '}
                 <a 
                   href="/information#contact" 
-                  className="text-blue-600 hover:text-blue-800 underline"
+                  className="text-dl-blue hover:text-dl-navy underline"
                 >
                   Contact Us
                 </a>.
@@ -43,8 +43,8 @@ export default function WebAccessibilityPage() {
           </div>
 
           {/* Zooming Section */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Zooming</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Zooming</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 In modern browsers you can increase the size of all images and text on the page by zooming.
@@ -79,8 +79,8 @@ export default function WebAccessibilityPage() {
           </div>
 
           {/* Accessibility Guidelines */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Accessibility Guidelines</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Accessibility Guidelines</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 All pages of this website conform to level A of the Web Content Accessibility 
@@ -110,8 +110,8 @@ export default function WebAccessibilityPage() {
           </div>
 
           {/* Web Standards and Technologies */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Web Standards and Technologies</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Web Standards and Technologies</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 This website has been built to conform to W3C standards for HTML and CSS. 
@@ -150,8 +150,8 @@ export default function WebAccessibilityPage() {
           </div>
 
           {/* Additional Accessibility Features */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Additional Accessibility Features</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Additional Accessibility Features</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Navigation</h3>
