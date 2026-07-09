@@ -1,6 +1,7 @@
 import Navigation from '../../components/Navigation';
 import Hero from '../../components/Hero';
 import Footer from '../../components/Footer';
+import MapEmbed from '../../components/MapEmbed';
 import Link from 'next/link';
 import { siteConfig } from '../../config/site.config';
 
@@ -112,16 +113,7 @@ export default function VisitPage() {
                 </div>
               </div>
               <div className="relative w-full h-64 md:h-full min-h-[240px] rounded-xl overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps?q=Dun%20Laoghaire%20Shopping%20Centre%2C%20Marine%20Road%2C%20Dun%20Laoghaire&output=embed"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Dún Laoghaire Shopping Centre location"
-                />
+                <MapEmbed />
               </div>
             </div>
           </section>

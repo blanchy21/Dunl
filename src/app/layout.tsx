@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Inter, Playfair_Display } from 'next/font/google'
 import { siteConfig } from '../config/site.config'
+import CookieConsent from '../components/CookieConsent'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -70,6 +71,7 @@ export default function RootLayout({
     <html lang="en" className="overflow-x-hidden">
       <body className={`${inter.variable} ${playfair.variable} font-sans overflow-x-hidden`}>
         {children}
+        <CookieConsent />
       </body>
     </html>
   )
