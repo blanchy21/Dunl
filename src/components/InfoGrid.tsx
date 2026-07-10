@@ -42,13 +42,6 @@ const InfoGrid = () => {
       externalLink: false
     },
     {
-      id: 4,
-      title: "Centre Map",
-      image: "/mall-2.png",
-      description: "Navigate the shopping centre with our interactive floor plans. Find stores, facilities, and amenities across all levels of the centre.",
-      link: "#centre-map" // Will show modal with centre map
-    },
-    {
       id: 5,
       title: "Accessibility",
       image: "/disabled.jpg",
@@ -58,7 +51,7 @@ const InfoGrid = () => {
     {
       id: 6,
       title: "History",
-      image: "/front.png",
+      image: "/front.jpg",
       description: "Discover the rich history of Dun Laoghaire Shopping Centre. Learn about our heritage, development, and role in the local community over the years.",
       link: "#history" // Will show modal with history info
     },
@@ -116,32 +109,6 @@ const InfoGrid = () => {
               <p className="text-sm text-gray-700">
                 <strong>Note:</strong> Individual store hours may vary. Please check with individual stores for their specific opening times.
               </p>
-            </div>
-          </div>
-        );
-      
-      case 4: // Centre Map
-        return (
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Centre Map & Floor Plans</h3>
-            <div className="space-y-4">
-              <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
-                <p className="text-gray-500">Interactive Centre Map Coming Soon</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <h4 className="font-semibold text-blue-900">Ground Floor</h4>
-                  <p className="text-sm text-blue-700">Main entrance, food court, major retailers</p>
-                </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                  <h4 className="font-semibold text-green-900">First Floor</h4>
-                  <p className="text-sm text-green-700">Fashion, beauty, services</p>
-                </div>
-                <div className="text-center p-4 bg-purple-50 rounded-lg">
-                  <h4 className="font-semibold text-purple-900">Second Floor</h4>
-                  <p className="text-sm text-purple-700">Offices, additional services</p>
-                </div>
-              </div>
             </div>
           </div>
         );
@@ -215,14 +182,14 @@ const InfoGrid = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 mb-3">General Enquiries</h4>
                 <div className="space-y-2 text-gray-700">
-                  <p><span className="font-medium">Phone:</span> +353 1 284 0000</p>
-                  <p><span className="font-medium">Email:</span> info@dunlaoghairecentre.ie</p>
+                  <p><span className="font-medium">Phone:</span> (01) 280 2981</p>
+                  <p><span className="font-medium">Email:</span> info@dlsc.ie</p>
                   <p><span className="font-medium">Address:</span></p>
-                  <p className="ml-4">Dun Laoghaire Shopping Centre<br />
-                  Marine Road<br />
-                  Dun Laoghaire<br />
+                  <p className="ml-4">Dún Laoghaire Shopping Centre<br />
+                  5 Marine Road<br />
+                  Dún Laoghaire<br />
                   Co. Dublin<br />
-                  A96 X4X0</p>
+                  A96 D283</p>
                 </div>
               </div>
               <div>
@@ -284,7 +251,7 @@ const InfoGrid = () => {
               </p>
               <div className="mt-3">
                 <p className="text-sm text-gray-700">
-                  <span className="font-medium">Leasing Contact:</span> leasing@dunlaoghairecentre.ie
+                  <span className="font-medium">Leasing Contact:</span> info@dlsc.ie
                 </p>
               </div>
             </div>
@@ -296,43 +263,47 @@ const InfoGrid = () => {
     }
   };
 
+  const handleKeyDown = (e: React.KeyboardEvent, item: InfoItem) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleItemClick(item);
+    }
+  };
+
   return (
     <>
       {/* Info Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
         {infoItems.map((item) => (
           <div
             key={item.id}
-            className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl cursor-pointer transform hover:scale-105 transition-all"
+            className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-dl-gold/50"
             onClick={() => handleItemClick(item)}
+            onKeyDown={(e) => handleKeyDown(e, item)}
+            tabIndex={0}
+            role="button"
+            aria-label={item.title}
           >
-            {/* Item Image */}
-            <div className="h-64 relative overflow-hidden">
-              {item.image && !item.image.includes('placeholder') ? (
-                <Image
-                  src={item.image}
-                  alt={`${item.title} image`}
-                  fill
-                  className="object-cover"
-                />
-              ) : (
-                <div className="h-full flex items-center justify-center bg-gray-100">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-gray-300 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-12 h-12 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <p className="text-sm text-gray-500">Image Coming Soon</p>
-                  </div>
-                </div>
-              )}
-            </div>
-            
-            {/* Item Info */}
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-600 line-clamp-3">{item.description}</p>
+            {item.image && !item.image.includes('placeholder') ? (
+              <Image
+                src={item.image}
+                alt={`${item.title}`}
+                fill
+                className="object-cover card-image-zoom"
+                sizes="(max-width: 640px) 100vw, 25vw"
+              />
+            ) : (
+              <div className="absolute inset-0 bg-dl-navy" />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-dl-navy via-dl-navy/40 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+              <h3 className="text-lg sm:text-xl font-display font-bold text-white tracking-tight">{item.title}</h3>
+              <span className="inline-flex items-center mt-1.5 text-dl-gold text-xs tracking-[0.15em] uppercase group-hover:translate-x-1 transition-transform duration-300">
+                View
+                <svg className="ml-1.5 w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </span>
             </div>
           </div>
         ))}
@@ -340,32 +311,41 @@ const InfoGrid = () => {
 
       {/* Info Detail Modal */}
       {selectedItem && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-6">
-              {/* Header */}
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-bold text-gray-900">{selectedItem.title}</h2>
-                <button
-                  onClick={() => setSelectedItem(null)}
-                  className="text-gray-400 hover:text-gray-600"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
+        <div
+          className="fixed inset-0 bg-dl-navy/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 z-50 overflow-y-auto"
+          onClick={() => setSelectedItem(null)}
+          onKeyDown={(e) => { if (e.key === 'Escape') setSelectedItem(null); }}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="info-modal-title"
+        >
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full my-4 sm:my-8 max-h-[calc(100vh-2rem)] sm:max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between gap-2 p-4 sm:p-6 border-b border-gray-100 sticky top-0 bg-white z-10">
+              <h2 id="info-modal-title" className="text-xl sm:text-2xl font-display font-bold text-dl-navy">{selectedItem.title}</h2>
+              <button
+                onClick={() => setSelectedItem(null)}
+                className="text-gray-400 hover:text-dl-navy transition-colors flex-shrink-0 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-gray-100"
+                aria-label="Close"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
 
-              {/* Content */}
+            <div className="p-4 sm:p-6">
               <div className="space-y-4">
                 {getModalContent(selectedItem)}
               </div>
 
-              {/* Actions */}
-              <div className="mt-6 flex space-x-3">
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
                 <button
                   onClick={() => setSelectedItem(null)}
-                  className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors"
+                  className="flex-1 border border-gray-300 text-gray-600 py-3 px-4 rounded-lg hover:bg-gray-50 transition-colors font-medium min-h-[44px]"
                 >
                   Close
                 </button>
@@ -375,7 +355,7 @@ const InfoGrid = () => {
                       setSelectedItem(null);
                       window.location.href = selectedItem.link!;
                     }}
-                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                    className="flex-1 bg-dl-navy text-white py-3 px-4 rounded-lg hover:bg-dl-blue transition-colors font-medium min-h-[44px]"
                   >
                     Learn More
                   </button>

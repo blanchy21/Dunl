@@ -1,34 +1,34 @@
 import Navigation from '../../components/Navigation';
+import Hero from '../../components/Hero';
 import Footer from '../../components/Footer';
 
 export default function TermsAndConditionsPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 font-display">
-              Terms and Conditions
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Please read these terms and conditions carefully before using our website 
-              and services at Dun Laoghaire Shopping Centre.
-            </p>
-            <p className="text-sm text-gray-500 mt-4">
-              Last updated: {new Date().toLocaleDateString('en-GB', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
-            </p>
-          </div>
+
+      <Hero
+        title="Terms & Conditions"
+        eyebrow="Legal"
+        subtitle="Please read these terms carefully before using our website and services."
+        image="/mall-1.jpg"
+        height="half"
+        overlay="dark"
+      />
+
+      <div className="bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <p className="text-sm text-gray-400 mb-10 text-center">
+            Last updated: {new Date().toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </p>
 
           {/* Introduction */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Introduction</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">1. Introduction</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 These Terms and Conditions (&quot;Terms&quot;) govern your use of the Dun Laoghaire Shopping Centre 
@@ -53,8 +53,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Acceptance of Terms */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Acceptance of Terms</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">2. Acceptance of Terms</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 By accessing, browsing, or using this Website, you acknowledge that you have read, 
@@ -70,8 +70,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Use of Website */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Use of Website</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">3. Use of Website</h2>
             
             <div className="space-y-6">
               <div>
@@ -115,8 +115,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Intellectual Property */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">4. Intellectual Property Rights</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">4. Intellectual Property Rights</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 The Website and its original content, features, and functionality are owned by 
@@ -151,8 +151,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* User Content */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">5. User-Generated Content</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">5. User-Generated Content</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 If you submit, post, or transmit any content to our Website (such as reviews, 
@@ -177,8 +177,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Privacy and Data Protection */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">6. Privacy and Data Protection</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">6. Privacy and Data Protection</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Your privacy is important to us. Our collection and use of personal information 
@@ -213,8 +213,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Disclaimers */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">7. Disclaimers and Limitations</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">7. Disclaimers and Limitations</h2>
             
             <div className="space-y-6">
               <div>
@@ -257,8 +257,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Indemnification */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">8. Indemnification</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">8. Indemnification</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 You agree to defend, indemnify, and hold harmless Dun Laoghaire Shopping Centre 
@@ -276,8 +276,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Termination */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">9. Termination</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">9. Termination</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We may terminate or suspend your access to the Website immediately, without prior 
@@ -294,8 +294,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Governing Law */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">10. Governing Law and Jurisdiction</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">10. Governing Law and Jurisdiction</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 These Terms shall be interpreted and governed by the laws of Ireland, without 
@@ -316,8 +316,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Changes to Terms */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">11. Changes to Terms</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">11. Changes to Terms</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We reserve the right, at our sole discretion, to modify or replace these Terms 
@@ -333,8 +333,8 @@ export default function TermsAndConditionsPage() {
           </div>
 
           {/* Severability */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">12. Severability</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">12. Severability</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 If any provision of these Terms is held to be invalid or unenforceable by a court, 

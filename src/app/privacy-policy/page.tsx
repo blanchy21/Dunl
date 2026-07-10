@@ -1,34 +1,34 @@
 import Navigation from '../../components/Navigation';
+import Hero from '../../components/Hero';
 import Footer from '../../components/Footer';
 
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      
-      <div className="bg-gray-50 min-h-screen">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4 font-display">
-              Privacy Policy
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Dun Laoghaire Shopping Centre is committed to protecting your privacy and 
-              personal data in accordance with GDPR and Irish data protection laws.
-            </p>
-            <p className="text-sm text-gray-500 mt-4">
-              Last updated: {new Date().toLocaleDateString('en-GB', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
-            </p>
-          </div>
+
+      <Hero
+        title="Privacy Policy"
+        eyebrow="Legal"
+        subtitle="How we collect, use and protect your personal data — in line with GDPR and Irish data protection law."
+        image="/mall-1.jpg"
+        height="half"
+        overlay="dark"
+      />
+
+      <div className="bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <p className="text-sm text-gray-400 mb-10 text-center">
+            Last updated: {new Date().toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </p>
 
           {/* Introduction */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Introduction</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Introduction</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 This Privacy Policy explains how Dun Laoghaire Shopping Centre (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) 
@@ -51,8 +51,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Information We Collect */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Information We Collect</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Information We Collect</h2>
             
             <div className="space-y-6">
               {/* Personal Information */}
@@ -109,7 +109,7 @@ export default function PrivacyPolicyPage() {
                 <p className="text-gray-700 mb-4">
                   We use cookies and similar technologies to enhance your experience. 
                   For detailed information about our cookie usage, please see our{' '}
-                  <a href="/cookies-policy" className="text-blue-600 hover:text-blue-800 underline">
+                  <a href="/cookies-policy" className="text-dl-blue hover:text-dl-navy underline">
                     Cookie Policy
                   </a>.
                 </p>
@@ -118,8 +118,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* How We Use Your Information */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">How We Use Your Information</h2>
             
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
@@ -171,8 +171,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Legal Basis for Processing */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Legal Basis for Processing</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Legal Basis for Processing</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Under GDPR, we process your personal data based on the following legal grounds:
@@ -203,8 +203,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Data Sharing */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Sharing and Disclosure</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Data Sharing and Disclosure</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We may share your personal information in the following circumstances:
@@ -246,8 +246,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Data Security */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Security</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Data Security</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We implement appropriate technical and organizational measures to protect your 
@@ -281,8 +281,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Data Retention */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Data Retention</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Data Retention</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We retain your personal data only for as long as necessary to fulfill the 
@@ -304,8 +304,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Your Rights */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights Under GDPR</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Your Rights Under GDPR</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Under the General Data Protection Regulation, you have the following rights:
@@ -369,8 +369,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* International Transfers */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">International Data Transfers</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">International Data Transfers</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Some of our service providers may be located outside the European Economic Area (EEA). 
@@ -390,8 +390,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Children's Privacy */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Children's Privacy</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Children&apos;s Privacy</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 Our services are not directed to children under 16 years of age. We do not 
@@ -403,8 +403,8 @@ export default function PrivacyPolicyPage() {
           </div>
 
           {/* Changes to Policy */}
-          <div className="bg-white rounded-lg shadow-md p-8 mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Changes to This Privacy Policy</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-8">
+            <h2 className="text-2xl font-display font-bold text-dl-navy mb-6">Changes to This Privacy Policy</h2>
             <div className="prose prose-lg max-w-none">
               <p className="text-gray-700 mb-6">
                 We may update this Privacy Policy from time to time to reflect changes in our 
